@@ -1,7 +1,6 @@
 # Dependencies
 markdown:         kramdown
 highlighter:      rouge
-remote_theme: fongandrew/hydeout
 
 # Setup
 title:            Hydeout
@@ -63,4 +62,4 @@ hydeout:
   version:          4.0.2
   repo:             https://github.com/fongandrew/hydeout
 
-theme: jekyll-theme-minimal
+remote_theme: fongandrew/hydeout
