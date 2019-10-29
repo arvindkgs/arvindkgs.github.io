@@ -1,6 +1,7 @@
 # Dependencies
 markdown:         kramdown
 highlighter:      rouge
+remote_theme: fongandrew/hydeout
 
 # Setup
 title:            Hydeout
@@ -61,5 +62,3 @@ google_analytics: UA-100461102-1
 hydeout:
   version:          4.0.2
   repo:             https://github.com/fongandrew/hydeout
-
-remote_theme: fongandrew/hydeout
