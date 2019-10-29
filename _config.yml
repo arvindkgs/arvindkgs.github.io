@@ -3,9 +3,9 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Setup
-title:            Hydeout
-tagline:          'A Jekyll theme'
-description:      'The <a href="http://hyde.getpoole.com" target="_blank">Hyde</a> theme for <a href="http://jekyllrb.com" target="_blank">Jekyll</a>, refreshed.'
+title:            Arvind Kumar GS
+tagline:          'Online CV'
+description:      'Lead cloud engineer, DIY enthusiast, Blogger, tech speaker'
 url:              https://arvindkgs.github.io
 baseurl:          '/hydeout'
                   # the optional subpath of your site, e.g. "/blog"
@@ -15,8 +15,8 @@ baseurl:          '/hydeout'
                   # sidebar_blog_link below.
 
 author:
-  name:           'Andrew Fong'
-  url:            https://twitter.com/fongandrewc
+  name:           'Arvind Kumar GS'
+  url:            https://twitter.com/arvind_kgs
 
 paginate:         5
 # paginate_path:    '/page:num'
@@ -59,7 +59,13 @@ google_analytics: UA-100461102-1
 # Used for Hydeout's own Github page. Feel free to remove for your
 # own fork.
 hydeout:
-  version:          4.0.2
+  version:          4.0.4
   repo:             https://github.com/fongandrew/hydeout
+
+github: arvindkgs
+stackoverflow: 355097/arvindkgs
+twitter: arvind_kgs
+linkedin: in/arvindkumargs
+email: mail.arvind85@gmail.com
 
 remote_theme: fongandrew/hydeout

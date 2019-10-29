@@ -7,36 +7,41 @@ layout: default
 
   {{ content }}
 
-  {% for post in paginator.posts %}
-  <article class="post-body">
-    <h2 class="post-title">
-      <a href="{{ post.url | relative_url }}">
-        {{ post.title }}
-      </a>
-    </h2>
-    {% include post-meta.html post=post %}
+  <p><span style="font-family: 'Courier New', Courier, monospace; font-style: italic;">’Good software developer writes code that a machine understands, Great software developers writes code that a hu-
+  man can understand’ - Martin Fowler</span></p>
 
-    {% if post.excerpt %}
-      {{ post.excerpt }}
-    {% else %}
-      {{ post.content }}
-    {% endif %}
-
-    {% if post.excerpt %}
-      {% comment %}Excerpt may be equal to content. Check.{% endcomment %}
-      {% capture content_words %}
-        {{ post.content | number_of_words }}
-      {% endcapture %}
-      {% capture excerpt_words %}
-        {{ post.excerpt | number_of_words }}
-      {% endcapture %}
-
-      {% if content_words != excerpt_words %}
-        <a href="{{ post.url | relative_url }}">More &hellip;</a>
-      {% endif %}
-    {% endif %}
-  </article>
-  {% endfor %}
+  <p>Lead developer with 10 years of experience in Software development. I have worked on multiple languages like Java,
+  Python, JavaScript and frameworks like Spring Boot, Swagger HK2, Mockito, and cloud technologies like Oracle Cloud,
+  AWS, Google Cloud, Salesforce and devops tools like Docker. I have lead teams in building products with strong foun-
+  dations in design, coding standards, scalable, highly configurable systems. Also interacted with clients and conducted
+  sessions for clients on product usage.
+  </p>
 
   {% include pagination-older.html %}
+
+  <a href='{{ "/category/work-experience" | absolute_url }}'>
+    Work Experience
+  </a>
+  <br>
+  <a href='{{ "skills" | absolute_url }}'>
+    Skills
+  </a>
+  <br>
+  <a href='{{ "education" | absolute_url }}'>
+    Education
+  </a>
+
+  <!-- <ul class="posts-list">
+    {% assign category = 'Work Experience' %}
+    {% for post in site.categories[category] %}
+      <li>
+        <h3>
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title }}
+            <small>{{ post.date | date_to_string }}</small>
+          </a>
+        </h3>
+      </li>
+    {% endfor %} -->
+
 </div>
