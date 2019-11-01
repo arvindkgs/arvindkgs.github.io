@@ -14,7 +14,7 @@ fields:
     required: false
   label: layout
   default: post
-- name: sub-title
+- name: sub_title
   type: text
   config:
     required: false
