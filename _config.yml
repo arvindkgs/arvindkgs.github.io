@@ -5,7 +5,7 @@ highlighter:      rouge
 # Setup
 title:            Arvind Kumar GS
 tagline:          'Online CV'
-description:      'Lead cloud engineer, DIY enthusiast, Blogger, Tech speaker'
+description:      'Lead cloud engineer'
 url:              https://arvindkgs.github.io
 baseurl:          ''
                   # the optional subpath of your site, e.g. "/blog"
