@@ -1,7 +1,7 @@
 ---
 layout: category
-title: Work Experience
+title: Talks and Articles
 published: false
 
 ---
-Detailing Work experience
+Detailing Talks and Articles
