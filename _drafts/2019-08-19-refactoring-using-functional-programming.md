@@ -11,6 +11,7 @@ elements:
 last_modified_at: 2019-11-01 17:09:14 +0000
 title: Refactoring using functional programming
 categories: Talks and Articles
+sub_title: Talks and Articles
 
 ---
 # Refactoring using functional programming
