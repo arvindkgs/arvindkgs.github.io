@@ -8,14 +8,13 @@ elements:
 - design_patterns
 - java
 - python
-last_modified_at: 2019-11-01 17:09:14 +0000
+last_modified_at: 2019-11-01T17:09:14.000+00:00
 title: Refactoring using functional programming
-categories: 
+categories:
 - Talks and Articles
-sub_title: "Talks and Articles"
----
-# Refactoring using functional programming
+sub_title: Talks and Articles
 
+---
 ## What
 
 Refactoring is a tool used for making code more readable and understandable to humans, thereby maintainable. It does not effect the functionality. In fact it should not effect the functionality.
