@@ -14,18 +14,14 @@ fields:
     required: false
   label: Sub title
   description: Enter 'article'
+  default: article
 - name: categories
   type: text
   config:
     required: false
   label: categories
   description: Enter 'Talks and Articles'
-- name: elements
-  type: text
-  config:
-    required: false
-  label: Elements
-  description: Enter related tags, including 'article'
+  default: Talks and Articles
 - name: body
   type: textarea
   default: ''
@@ -36,5 +32,10 @@ fields:
       format: markdown
   label: Body
   description: Main content
+- name: ele
+  type: tag_list
+  default: []
+  label: Elements
+  description: Add tags, including 'article'
 pages:
 - _posts/functional-programming-using-kotlin.md
