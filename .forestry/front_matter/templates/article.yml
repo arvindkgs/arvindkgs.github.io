@@ -42,4 +42,4 @@ fields:
     display_utc: false
   default: now
 pages:
-- _posts/refactoring-using-functional-programming.md
+- _posts/2019-08-19-refactoring-using-functional-programming.md
