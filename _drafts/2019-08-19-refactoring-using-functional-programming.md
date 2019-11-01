@@ -53,7 +53,7 @@ Description: **Extracts and prints value of properties from file**
 
 Input:
 
-* **file** of type - xml | property | json .. and
+* **file** (of type - xml | property | json ..) and
 * **property names** **of values to extract**
 * **dynamic map** (replaces the dynamic map key (if) found in the property values, with corresponding map values.)
 
