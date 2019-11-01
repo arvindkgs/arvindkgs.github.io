@@ -85,7 +85,7 @@ Procedural way of solving the problem,
 
   **Disadvantages** of the above approach?
   1. This causes a bottleneck on the extract method. In a team of developers, constant updates to a single entity by all the developers will result in merge conflicts.
-  2. Suppose you need to add another handler, say ‘YAML’ file type. You will need to add another if else block in ‘extract’ method. Hence the 'extract' method will increase in size as extensions are added. This will make it less readable. 
+  2. Suppose you need to add another handler, say ‘YAML’ file type. You will need to add another if else block in ‘extract’ method. Hence the 'extract' method will increase in size as extensions are added. This will make it less readable.
   3. Having business logic interspersed with your I/O operations will result in unit test cases that will need actual resource versus a mock.
   4. The resource I/O operations code cannot be reused in other parts of the code as it is tightly coupled to the business logic.
 
@@ -162,7 +162,7 @@ You can further decouple the if-else code for instantiating ResourceHandler by h
 
 The enhanced ExtractReplace class with ‘builder’ pattern will look like this:
 
-![](/uploads/Functional_Builder_ExtractReplace_Strategy.png)
+![](/uploads/Functional_Builder_ExtractReplace_Strategy.png "Class ExtractReplace with Builder Pattern")
 
 More on the builder pattern [here](https://dzone.com/articles/design-patterns-the-builder-pattern).
 
