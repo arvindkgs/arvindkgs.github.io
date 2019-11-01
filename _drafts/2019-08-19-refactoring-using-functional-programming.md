@@ -1,6 +1,6 @@
 ---
 layout: post
-sub-title: Talks and Articles
+sub-title: '"Talks and Articles"'
 elements:
 - article
 - functional_programming
