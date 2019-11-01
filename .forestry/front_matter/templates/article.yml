@@ -18,7 +18,7 @@ fields:
   type: text
   config:
     required: false
-  label: Sub-title
+  label: Sub_title
   default: Talks and Articles
 - name: categories
   type: text
