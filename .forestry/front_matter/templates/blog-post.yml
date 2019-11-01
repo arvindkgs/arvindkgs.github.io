@@ -1,4 +1,38 @@
 ---
 label: Blog Post
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  description: title of blog post
+- name: sub_title
+  type: text
+  config:
+    required: false
+  label: Sub title
+  description: Enter 'article'
+- name: categories
+  type: text
+  config:
+    required: false
+  label: categories
+  description: Enter 'Talks and Articles'
+- name: elements
+  type: text
+  config:
+    required: false
+  label: Elements
+  description: Enter related tags, including 'article'
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Body
+  description: Main content
