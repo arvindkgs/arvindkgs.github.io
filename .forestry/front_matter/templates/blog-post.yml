@@ -36,3 +36,5 @@ fields:
       format: markdown
   label: Body
   description: Main content
+pages:
+- _posts/functional-programming-using-kotlin.md
