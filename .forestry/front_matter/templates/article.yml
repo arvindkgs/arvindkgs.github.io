@@ -1,4 +1,43 @@
 ---
 label: Article
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  description: title of article
+- name: layout
+  type: text
+  config:
+    required: false
+  label: layout
+  default: post
+- name: sub-title
+  type: text
+  config:
+    required: false
+  label: Sub-title
+  default: Talks and Articles
+- name: categories
+  type: text
+  config:
+    required: false
+  label: Categories
+  description: Category defaults to 'Talks and Articles'
+- name: elements
+  type: tag_list
+  default: []
+  label: Elements
+  description: Add tags, include 'article'
+- name: last_modified_at
+  type: datetime
+  label: Last modified at
+  description: Last Modified date
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
