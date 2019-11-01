@@ -14,18 +14,22 @@ fields:
     required: false
   label: layout
   default: post
+  hidden: true
 - name: sub_title
   type: text
   config:
     required: false
   label: Sub_title
   default: Talks and Articles
+  hidden: true
 - name: categories
   type: text
   config:
     required: false
   label: Categories
   description: Category defaults to 'Talks and Articles'
+  default: Talks and Articles
+  hidden: true
 - name: elements
   type: tag_list
   default: []
@@ -41,5 +45,6 @@ fields:
     time_format: 
     display_utc: false
   default: now
+  hidden: true
 pages:
 - _posts/2019-08-19-refactoring-using-functional-programming.md
