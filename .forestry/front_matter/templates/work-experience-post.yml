@@ -1,0 +1,22 @@
+---
+label: Work Experience Post
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: text
+  name: sub_title
+  label: sub_title
+- type: list
+  name: categories
+  label: categories
+- type: list
+  name: elements
+  label: elements
+- type: datetime
+  name: last_modified_at
+  label: last_modified_at
