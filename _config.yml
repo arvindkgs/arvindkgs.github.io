@@ -27,13 +27,6 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
 
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - Makefile
-  - README.md
-  - .gitignore
-
 permalink:        /:year/:month/:day/:title.html
 
 defaults:
