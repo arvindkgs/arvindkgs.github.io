@@ -14,8 +14,6 @@ title: Redis day Bangalore 2020
 
 Redis Day Bangalore 2020 was a whirlwind experience. This is a brief summary of the two days. The official home for Redis Day Bangalore  - [https://connect.redislabs.com/redisdaybangalore](https://connect.redislabs.com/redisdaybangalore "https://connect.redislabs.com/redisdaybangalore")
 
-***
-
 ### DAY 1 (Jan 21st)
 
 I thought Redis was a tool for caching and only an alternative for memcache. I couldn’t be more off-target. I was blown away by the multitude of tools/features under Redis.
@@ -33,7 +31,7 @@ This day was all about introduction and training on different modules offered by
 3. Redis Clustering
    * Hashing to divide the keys among the Redis nodes
    * Using Redis Open source cluster
-   * Comparison to Redis Enterprise 
+   * Comparison to Redis Enterprise
 4. RedisTimeSeries OR RediSearch
    * Introduction to RedisTimeSeries
    * Creating RedisTimeSeries
@@ -48,7 +46,7 @@ All the session slides are available [here](https://bit.ly/redis-bangalore-slide
 The second day was more about use-cases of Redis in production by different companies. There was quite a few presentations through out the day. Some of companies that I remember were:
 
  1. sRide
- 2. HolidayMe 
+ 2. HolidayMe
  3. VUclip - Using Redis as persistence store
  4. Reliance Jio - Using Redis as a cache
  5. Freshworks - Using Redis for Rate Limiting
