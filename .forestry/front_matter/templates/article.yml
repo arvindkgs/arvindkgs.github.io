@@ -45,4 +45,4 @@ fields:
   hidden: true
 pages:
 - _posts/2019-08-19-refactoring-using-functional-programming.md
-- _posts/redis-day-bangalore-2020.md
+- _posts/2020-01-23-redis-day-bangalore-2020.md
