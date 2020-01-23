@@ -6,7 +6,8 @@ elements:
 - conference
 - redis
 last_modified_at: 2020-01-23 09:31:57 +0000
-categories: []
+categories:
+- Article
 title: Redis day Bangalore 2020
 
 ---
