@@ -4,7 +4,7 @@ title: Talks and Articles
 sidebar_link: true
 
 ---
-January 2020 - Thoughts on Redis Day Bangalore 2020
+January 2020 - [Thoughts on Redis Day Bangalore 2020](https://www.arvindkgs.com/2020/01/23/redis-day-bangalore-2020.html "Thoughts on Redis Day Bangalore 2020"){% include svg/blogger.svg %}
 
 December 2019 - [Monitoring using Prometheus and Grafana](https://speakerdeck.com/arvindkgs/monitoring-using-prometheus-and-grafana "Monitoring using Prometheus and Grafana") {% include svg/slideshare.svg %}
 
