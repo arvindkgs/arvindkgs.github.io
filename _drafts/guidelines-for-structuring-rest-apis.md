@@ -109,7 +109,7 @@ class IngestPojo {
 Disadvantages of this approach:
 
 1. As the entry point in the above code if the IngestController.ingestService(), each of the teams will need to update the same file leading to merge conflicts
-2. The request body params are fixed.
+2. The request body params are need to general to support each of the entities - like nosql, rdbms, etc. Not enforcing strict parameter scope can lead security threats and erroneous requests.
 3. Can lead to code smells due to the switch statement growing in size as more entities are added.
 4. No strict enforcement, consumer can pass an unsupported entity type in the path param.
 5. As the number of entities grow, the endpoints also grow, leading to cumbersome documentation. So for the consumer looking consume these endpoints will be flooded with a long list of endpoints.
@@ -201,5 +201,9 @@ Advantages:
                   /archive
 
                   ...
-5. Each Entity is free to define it's own parameters.
+5. Each Entity is free to define it's own parameters. Hence you can have stricter enforcement of parameters. This is better for security and validations.
 6. Lesser code smells
+
+Side-note: When you need to group your APIs under an umbrella (be it entity/functional unit/workflow etc) make sure your umbrella/parent grows at a slower rate than your inner children. This gives a better structuring and visibility as your application grows.
+
+This is an initial bite, as I have more to talk on this. Hopefully more to follow in this series on 'Designing REST APIs'
