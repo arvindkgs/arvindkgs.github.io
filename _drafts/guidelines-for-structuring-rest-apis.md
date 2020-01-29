@@ -73,9 +73,21 @@ The Java Controller Class for this will have following structure
 
 class IngestController {
 
-        @PostMapping(value = "/ingest/{operation}", consumes = "application/json", produces = "application/json")
+        @PostMapping(value = "/ingest/{emtity}", consumes = "application/json", produces = "application/json")
 
-         public boolean ingestService(@PathVariable("operation") String operation){
+         public boolean ingestService(@PathVariable("operation") String entity){
+
+                  switch(entity) {
+
+                     case "rdbms": //Logic for integrating with rdbms
+
+                                             break;
+
+                     case "nosql": //Logic for integrating with rdbms
+
+                                             break;
+
+                     //and-so-on
 
          }
 
