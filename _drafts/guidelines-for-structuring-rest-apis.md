@@ -73,9 +73,9 @@ The Java Controller Class for this will have following structure
 
 class IngestController {
 
-         `@PostMapping(value = "/ingest/{operation}", consumes = "application/json", produces = "application/json")`
+        @`PostMapping(value = "/ingest/{operation}", consumes = "application/json", produces = "application/json")`
 
-         public boolean ingestService(`@PathVariable("operation") String` `operation`){
+         public boolean ingestService(@`PathVariable("operation") String` `operation`){
 
          }
 
