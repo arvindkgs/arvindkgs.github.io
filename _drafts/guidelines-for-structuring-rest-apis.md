@@ -62,8 +62,7 @@ Now you could design your REST APIs as:
     Body: {
      "type" : "PostgreSQL"
      "connection-details" : "",
-     "contents" : "" 
-     }
+     "
 
 The Java Controller Class for this will have following structure
 
@@ -115,8 +114,62 @@ Disadvantages of this approach:
 4. No strict enforcement, consumer can pass an unsupported entity type in the path param.
 5. As the number of entities grow, the endpoints also grow, leading to cumbersome documentation. So for the consumer looking consume these endpoints will be flooded with a long list of endpoints.
 
-OR
+### Better approach
 
-2. Entity -> Operation
+2. Entity -> Operation (Entity encompass operation)
+   * rdbms
 
-   POST:
+       POST: /rdbms/ingest
+       Body: {
+        "type" : "PostgreSQL"
+        "connection-details" : "",
+        "contents" : "" 
+        }
+        POST: /rdbms/archive
+        Body: {
+        "type" : "PostgreSQL"
+        "connection-details" : "",
+        "contents" : "" 
+        }
+   * nosql
+
+       POST: /nosql/ingest
+       Body: {
+        "type" : "MongoDB"
+        "connection-details" : "",
+        "contents" : "" 
+        }
+
+   Each Entity will have its own Rest Controller as follows:
+
+   {% highlight java  %} 
+
+   @RestController(path ="/rdbms")
+
+   class RdbmsController {
+
+           @PostMapping(value = "/ingest", consumes = "application/json", produces = "application/json")
+
+            public boolean ingestService(@ResponseBody IngestPojo params){
+
+                   //Logic for integrating with rdbms
+
+            }
+
+   }
+
+   @RestController(path ="/nosql")
+
+   class NosqlController {
+
+             @PostMapping(value = "/ingest", consumes = "application/json", produces = "application/json")
+
+             public boolean ingestService(@ResponseBody IngestPojo params){
+
+                   //Logic for integrating with nosql
+
+            }
+
+   }
+
+   {% endhighlight %}
