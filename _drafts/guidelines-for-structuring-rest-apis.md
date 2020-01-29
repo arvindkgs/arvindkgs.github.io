@@ -44,25 +44,36 @@ Now you could design your REST APIs as:
 1. Operation->Entity (Operation encompass entities)
    * ingest
 
-       POST: /ingest/{entity}
-       Body: {
-        "type" : "PostgreSQL"
-        "connection-details" : "",
-        "contents" : "" 
-        }
+     >  POST: /ingest/{entity}
+     >
+     > Body: {
+     >
+     >  "type" : "PostgreSQL"
+     >
+     >  "connection-details" : "",
+     >
+     >  "contents" : "" 
+     >
+     >  } 
 
-   For example:
+     For example:
 
-   /ingest/rdbms
+              /ingest/rdbms
 
-   /ingest/nosql ... etc
+              /ingest/nosql ... etc
    * archive
 
-    POST: /archive/{entity}
-    Body: {
-     "type" : "PostgreSQL"
-     "connection-details" : "",
-     "
+     > POST: /archive/{entity}
+     >
+     > Body: {
+     >
+     >  "type" : "PostgreSQL"
+     >
+     >  "connection-details" : "",
+     >
+     >  "contents" : "" 
+     >
+     > }
 
 The Java Controller Class for this will have following structure
 
