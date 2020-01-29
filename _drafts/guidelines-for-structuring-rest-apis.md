@@ -18,7 +18,7 @@ I have employed the following practices to structure my REST APIs making them:
 1. Intuitive (For Consumers)
 2. Isolation of concern (For Developers)
 3. Inherent Classification (For Consumers and Developers)
-4. Extensive (For Developers)
+4. Extensibility (For Developers)
 
 Any RESTFUL application can be classified into following constructs:
 
