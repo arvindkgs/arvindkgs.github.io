@@ -40,3 +40,6 @@ Supported Entities are:
 Now you could design your REST APIs as:
 
 1. EndPoint: Operation
+{% highlight java %}
+class Main {}
+{% endhighlight %}
