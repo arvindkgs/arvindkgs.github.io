@@ -37,9 +37,27 @@ Supported Entities are:
 3. TimeSeries (InfluxDB)
 4. Message Queues (RabbitMQ)
 
+Assume, each of these entities have different teams working on them.
+
 Now you could design your REST APIs as:
 
-1. EndPoint: Operation
-{% highlight java %}
-class Main {}
-{% endhighlight %}
+1. Operation->Entity (Operation containing entities)
+
+   POST: {% highlight html %} /Operation {% endhighlight %}
+
+   Body: {
+
+        "entity"  : "RDBMS"
+
+        "type" : "PostgreSQL"
+
+        "connection-details" : "",
+
+        "contents" : ""
+
+        }
+
+   OR
+2. Entity -> Operation 
+
+   POST: 
