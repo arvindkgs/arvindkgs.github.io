@@ -44,12 +44,21 @@ Now you could design your REST APIs as:
 1. Operation->Entity (Operation encompass entities)
    * ingest
 
-       POST: /ingest/{entity}
-       Body: {
-        "type" : "PostgreSQL"
-        "connection-details" : "",
-        "contents" : "" 
-        }
+     {% highlight json %}
+
+      POST: /ingest/{entity}
+
+     Body: {
+
+      "type" : "PostgreSQL"
+
+      "connection-details" : "",
+
+      "contents" : "" 
+
+      } {
+
+     % endhighlight %}
 
    For example:
 
