@@ -186,20 +186,20 @@ Advantages:
 
    Then they will grouped as
 
-   /rdmbs/ingest
+       /rdmbs/ingest
 
-               /archive
+                   /archive
 
-               /search
+                   /search
 
-               /configure
+                   /configure
 
-               /index
+                   /index
 
-   /nosql/ingest
+       /nosql/ingest
 
-              /archive
+                  /archive
 
-              ...
+                  ...
 5. Each Entity is free to define it's own parameters.
 6. Lesser code smells
