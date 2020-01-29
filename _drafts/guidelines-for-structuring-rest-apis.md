@@ -6,7 +6,7 @@ elements:
 - restapis
 - best practices
 - guidelines
-last_modified_at: 2019-11-01 18:57:51 +0000
+last_modified_at: 2019-11-01T18:57:51.000+00:00
 categories: []
 title: Guidelines for structuring REST APIs
 
@@ -40,3 +40,7 @@ Supported Entities are:
 Now you could design your REST APIs as:
 
 1. EndPoint: Operation
+{% highlight java %}
+class Main {
+}
+{% endhighlight %}
