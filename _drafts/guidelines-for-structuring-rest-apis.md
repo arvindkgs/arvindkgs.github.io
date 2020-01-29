@@ -217,4 +217,4 @@ Advantages:
 
 Side-note: When you need to group your APIs under an umbrella (be it entity/functional unit/workflow etc) make sure your umbrella/parent grows at a slower rate than your inner children. This gives a better structuring and visibility as your application grows.
 
-This is an initial bite, as I have more to talk on this. Hopefully more to follow in this series on 'Designing REST APIs'
+Hopefully more to follow in this series on 'Designing REST APIs'.
