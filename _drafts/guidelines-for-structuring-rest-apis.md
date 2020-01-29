@@ -75,7 +75,7 @@ class IngestController {
 
         @PostMapping(value = "/ingest/{emtity}", consumes = "application/json", produces = "application/json")
 
-         public boolean ingestService(@PathVariable("operation") String entity){
+         public boolean ingestService(@PathVariable("operation") String entity, @ResponseBody IngestPojo params){
 
                   switch(entity) {
 
@@ -93,7 +93,27 @@ class IngestController {
 
 }
 
+//POJO for Request Body
+
+class IngestPojo {
+
+      String type;
+
+       String connectionDetails;
+
+       String contents;
+
+}
+
  {% endhighlight %}
+
+Disadvantages of this approach:
+
+1. As the entry point in the above code if the IngestController.ingestService(), each of the teams will need to update the same file leading to merge conflicts
+2. The request body params are fixed.
+3. Can lead to code smells due to the switch statement growing in size as more entities are added.
+4. No strict enforcement, consumer can pass an unsupported entity type in the path param.
+5. As the number of entities grow, the endpoints also grow, leading to cumbersome documentation. So for the consumer looking consume these endpoints will be flooded with a long list of endpoints.
 
 OR
 
