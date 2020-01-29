@@ -37,27 +37,54 @@ Supported Entities are:
 3. TimeSeries (InfluxDB)
 4. Message Queues (RabbitMQ)
 
-Assume, each of these entities have different teams working on them.
+Assume, each of these entities have different teams building custom integrations for them.
 
 Now you could design your REST APIs as:
 
-1. Operation->Entity (Operation containing entities)
+1. Operation->Entity (Operation encompass entities)
+   * ingest
 
-   POST: {% highlight html %} /Operation {% endhighlight %}
-
-   Body: {
-
-        "entity"  : "RDBMS"
-
+       POST: /ingest/{entity}
+       Body: {
         "type" : "PostgreSQL"
-
         "connection-details" : "",
-
-        "contents" : ""
-
+        "contents" : "" 
         }
 
-   OR
-2. Entity -> Operation 
+   For example:
 
-   POST: 
+   /ingest/rdbms
+
+   /ingest/nosql ... etc
+   * archive
+
+    POST: /archive/{entity}
+    Body: {
+     "type" : "PostgreSQL"
+     "connection-details" : "",
+     "contents" : "" 
+     }
+
+The Java Controller Class for this will have following structure
+
+{% highlight java  %} 
+
+@RestController
+
+class IngestController {
+
+         `@PostMapping(value = "/ingest/{operation}", consumes = "application/json", produces = "application/json")`
+
+         public boolean ingestService(`@PathVariable("operation") String` `operation`){
+
+         }
+
+}
+
+ {% endhighlight %}
+
+OR
+
+2. Entity -> Operation
+
+   POST:
