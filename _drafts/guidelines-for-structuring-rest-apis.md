@@ -140,7 +140,7 @@ Disadvantages of this approach:
         "contents" : "" 
         }
 
-   Each Entity will have its own Rest Controller as follows:
+   Each Entity will have its own Rest Controller class as follows:
 
    {% highlight java  %} 
 
@@ -150,7 +150,7 @@ Disadvantages of this approach:
 
            @PostMapping(value = "/ingest", consumes = "application/json", produces = "application/json")
 
-            public boolean ingestService(@ResponseBody IngestPojo params){
+            public boolean ingestService(@ResponseBody RdmsIngestPojo params){
 
                    //Logic for integrating with rdbms
 
@@ -164,7 +164,7 @@ Disadvantages of this approach:
 
              @PostMapping(value = "/ingest", consumes = "application/json", produces = "application/json")
 
-             public boolean ingestService(@ResponseBody IngestPojo params){
+             public boolean ingestService(@ResponseBody NosqlIngestPojo params){
 
                    //Logic for integrating with nosql
 
@@ -173,3 +173,33 @@ Disadvantages of this approach:
    }
 
    {% endhighlight %}
+
+Advantages:
+
+1. Separate Rest Controller classes so developers can commit and push without merge conflicts. So separation of concern.
+2. Fixed endpoints(no path params) so less chances of invalid requests
+3. Better grouping as all related operations are encapsulated in same class.
+4. Better documentation. For example if more operations are added to the object storage APIs  like:
+   * search
+   * configure
+   * index
+
+   Then they will grouped as
+
+   /rdmbs/ingest
+
+               /archive
+
+               /search
+
+               /configure
+
+               /index
+
+   /nosql/ingest
+
+              /archive
+
+              ...
+5. Each Entity is free to define it's own parameters.
+6. Lesser code smells
