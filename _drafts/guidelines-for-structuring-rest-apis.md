@@ -119,8 +119,8 @@ class IngestPojo {
 
 Disadvantages of this approach:
 
-1. As the entry point in the above code if the IngestController.ingestService(), each of the teams will need to update the same file leading to merge conflicts
-2. The request body params are need to general to support each of the entities - like nosql, rdbms, etc. Not enforcing strict parameter scope can lead security threats and erroneous requests.
+1. As the entry point in the above code is IngestController.ingestService(), each of the teams will need to update the same method leading to merge conflicts
+2. The request body params are need to be general to support each of the entities - like nosql, rdbms, etc. Not enforcing strict parameter scope can lead to security threats and erroneous requests.
 3. Can lead to code smells due to the switch statement growing in size as more entities are added.
 4. No strict enforcement, consumer can pass an unsupported entity type in the path param.
 5. As the number of entities grow, the endpoints also grow, leading to cumbersome documentation. So for the consumer looking consume these endpoints will be flooded with a long list of endpoints.
@@ -187,7 +187,7 @@ Disadvantages of this approach:
 
 Advantages:
 
-1. Separate Rest Controller classes so developers can commit and push without merge conflicts. So separation of concern.
+1. Separate Rest Controller classes so developers can commit and push without merge conflicts.
 2. Fixed endpoints(no path params) so less chances of invalid requests
 3. Better grouping as all related operations are encapsulated in same class.
 4. Better documentation. For example if more operations are added to the object storage APIs  like:
@@ -212,7 +212,7 @@ Advantages:
                   /archive
 
                   ...
-5. Each Entity is free to define it's own parameters. Hence you can have stricter enforcement of parameters. This is better for security and validations.
+5. Each Entity is free to define it's own parameters. Hence you can enforce strict parameter scope. This is better for security and validations.
 6. Lesser code smells
 
 Side-note: When you need to group your APIs under an umbrella (be it entity/functional unit/workflow etc) make sure your umbrella/parent grows at a slower rate than your inner children. This gives a better structuring and visibility as your application grows.
