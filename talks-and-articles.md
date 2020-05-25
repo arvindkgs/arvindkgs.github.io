@@ -4,6 +4,10 @@ title: Talks and Articles
 sidebar_link: true
 
 ---
+May 2020 - [Running springboot app on kubernetes with private repo](https://dev.to/arvindkgs/running-springboot-app-on-kubernetes-with-private-repository-4cpp)
+
+April 2020 - [Similarities between Roman military and handshake protocol](https://medium.com/@mail.arvind85/similarities-between-roman-military-communication-and-two-way-handshake-protocol-89234d75fd9c)
+
 January 2020 - [Guidelines for structuring REST APIs]({% post_url 2020-01-29-guidelines-for-structuring-rest-apis %} "Guidelines for structuring REST APIs")
 
 January 2020 - [Thoughts on Redis Day Bangalore 2020]({% post_url 2020-01-23-redis-day-bangalore-2020 %})
