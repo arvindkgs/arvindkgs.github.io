@@ -4,6 +4,10 @@ title: Talks and Articles
 sidebar_link: true
 
 ---
+August 2020 - [Modularizing Docker Images](https://hackernoon.com/modularizing-docker-images-bt2y3uii)
+
+August 2020 - [Scaling Web applications](https://hackernoon.com/scaling-web-applications-is-like-walking-a-tight-rope-in-a-storm-nx1f3uy5)
+
 May 2020 - [Running springboot app on kubernetes with private repo](https://dev.to/arvindkgs/running-springboot-app-on-kubernetes-with-private-repository-4cpp)
 
 April 2020 - [Similarities between Roman military and handshake protocol](https://medium.com/@mail.arvind85/similarities-between-roman-military-communication-and-two-way-handshake-protocol-89234d75fd9c)
