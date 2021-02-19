@@ -6,7 +6,7 @@ sidebar_link: true
 ---
 [Cloud operation automation tool](#Bats "Bats")
 
-[Bats](#Bats "Bats")
+[Bats](#Bats)
 
 [Compute moving average of discrete events in time series](#compute-moving-average-of-discrete-events-in-time-series)
 
