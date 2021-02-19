@@ -4,7 +4,7 @@ title: Projects
 sidebar_link: true
 
 ---
-[Bats](#Bats)
+[Bats](#bats)
 
 [Compute moving average of discrete events in time series](#compute-moving-average-of-discrete-events-in-time-series)
 
