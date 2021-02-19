@@ -2,21 +2,21 @@
 layout: page
 title: Projects
 sidebar_link: true
----
 
-[Cloud operation automation tool](#cloud-operation-automation-tool)
+---
+[Cloud operation automation tool](#Bats "Bats")
 
 [Compute moving average of discrete events in time series](#compute-moving-average-of-discrete-events-in-time-series)
 
 [Drone Delivery System](#drone-delivery-system)
 
-## Cloud operation automation tool
+## Bats
 
 <span style="color:grey">2019-November</span>
 
-Built and designed COATS.
+Built and designed[ Bats](https://arvindkgs.com/bats "Bats").
 
-COATS can be integrated into your CI/CD pipeline and can perform following validations:
+[Bats](https://arvindkgs.com/bats "Bats") can be integrated into your CI/CD pipeline and can perform following validations:
 
 1. Compare two resources.
 2. Validate success/failure of shell commands.
