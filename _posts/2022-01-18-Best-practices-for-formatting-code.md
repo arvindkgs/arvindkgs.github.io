@@ -59,10 +59,10 @@ Code formatting is opinionated and individualistic. But looking at code for more
     ```
 
  2. Using code formatters in IDE. I prefer to use [google java format](https://github.com/google/google-java-format "Google java format").
-    <br>
- 3. Using Intellij IDE [inspection](https://www.jetbrains.com/help/idea/code-inspection.html "inspection") and [intent actions](https://www.jetbrains.com/help/idea/intention-actions.html#apply-intention-actions "intent actions") to refactor code Reference: [https://lightrun.com/best-practices/the-quick-and-easy-guide-to-reformatting-code-in-intellij/](https://lightrun.com/best-practices/the-quick-and-easy-guide-to-reformatting-code-in-intellij/ "best practises reformatting code in intellij")
- 4. Using static code analysis tools like sonarqube to catch issues like deep nesting.
- 5. Fluent APIs\
+ 3. Using [maven formatter plugin](https://github.com/coveooss/fmt-maven-plugin) to auto format code on build
+ 4. Using Intellij IDE [inspection](https://www.jetbrains.com/help/idea/code-inspection.html "inspection") and [intent actions](https://www.jetbrains.com/help/idea/intention-actions.html#apply-intention-actions "intent actions") to refactor code Reference: [https://lightrun.com/best-practices/the-quick-and-easy-guide-to-reformatting-code-in-intellij/](https://lightrun.com/best-practices/the-quick-and-easy-guide-to-reformatting-code-in-intellij/ "best practises reformatting code in intellij")
+ 5. Using static code analysis tools like sonarqube to catch issues like deep nesting.
+ 6. Fluent APIs\
     When using Java's fluent API to write a functional style of programming, the operator should be in the new line.  
     **Correct**
     ```java
@@ -80,7 +80,7 @@ Code formatting is opinionated and individualistic. But looking at code for more
     setBody().constant("Invalid request data");
     ```
   
- 6. Test names\
+ 7. Test names\
     test should follow the BDD convention: givenX_whenY_thenZ\
     *the _given_ part is optional, but the other two are not*\
     __example__:
