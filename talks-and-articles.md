@@ -4,6 +4,8 @@ title: Talks and Articles
 sidebar_link: true
 
 ---
+January 2022 - [Best practices for formatting code](/_posts/2022-01-18-Best-practices-for-formatting-code.md)
+
 August 2020 - [Modularizing Docker Images](https://hackernoon.com/modularizing-docker-images-bt2y3uii)
 
 August 2020 - [Scaling Web applications](https://hackernoon.com/scaling-web-applications-is-like-walking-a-tight-rope-in-a-storm-nx1f3uy5)
