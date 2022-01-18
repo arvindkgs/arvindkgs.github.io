@@ -71,8 +71,8 @@ Code formatting is opinionated and individualistic. But looking at code for more
      
    {% endhighlight %}
 
-   Reference: [https://trishagee.com/2021/05/14/do-we-need-comments-in-our-code/#more-1535](https://trishagee.com/2021/05/14/do-we-need-comments-in-our-code/#more-1535 "https://trishagee.com/2021/05/14/do-we-need-comments-in-our-code/#more-1535")
-2. Using code formatters in IDE. I prefer to use [https://github.com/google/google-java-format](https://github.com/google/google-java-format "Google java format"). 
+   Reference: [do-we-need-comments-in-our-code](https://trishagee.com/2021/05/14/do-we-need-comments-in-our-code/#more-1535 "https://trishagee.com/2021/05/14/do-we-need-comments-in-our-code/#more-1535")
+2. Using code formatters in IDE. I prefer to use [google java format](https://github.com/google/google-java-format "Google java format"). 
 3. Using Intellij IDE [inspection](https://www.jetbrains.com/help/idea/code-inspection.html "inspection") and [intent actions](https://www.jetbrains.com/help/idea/intention-actions.html#apply-intention-actions "intent actions") to refactor code Reference: [https://lightrun.com/best-practices/the-quick-and-easy-guide-to-reformatting-code-in-intellij/](https://lightrun.com/best-practices/the-quick-and-easy-guide-to-reformatting-code-in-intellij/ "best practises reformatting code in intellij")
 4. Using static code analysis tools like sonarqube to catch issues like deep nesting.
 5. Fluent APIs  
@@ -200,12 +200,10 @@ Code formatting is opinionated and individualistic. But looking at code for more
    \- when breaking a line with an operator, put the operator on the new line
 
    \- **example - correct**:  
-   {% highlight java  %} 
-
-   CompletableFuture<String> completableFuture   
+   {% highlight java  %}
+      CompletableFuture<String> completableFuture   
     = new CompletableFuture<>();
-
-   {% endhighlight  %} 
+   {% endhighlight  %}
 
    \- **incorrect**:
 
@@ -215,4 +213,6 @@ Code formatting is opinionated and individualistic. But looking at code for more
 
    new CompletableFuture<>();
 
-   {% endhighlight  %} 
+   {% endhighlight  %}
+  
+  Reference : baeldung guide
