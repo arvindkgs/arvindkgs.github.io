@@ -70,4 +70,149 @@ Code formatting is opinionated and individualistic. But looking at code for more
 
      
    {% endhighlight %}
-2. 
+
+   Reference: [https://trishagee.com/2021/05/14/do-we-need-comments-in-our-code/#more-1535](https://trishagee.com/2021/05/14/do-we-need-comments-in-our-code/#more-1535 "https://trishagee.com/2021/05/14/do-we-need-comments-in-our-code/#more-1535")
+2. Using code formatters in IDE. I prefer to use [https://github.com/google/google-java-format](https://github.com/google/google-java-format "Google java format"). 
+3. Using Intellij IDE [inspection](https://www.jetbrains.com/help/idea/code-inspection.html "inspection") and [intent actions](https://www.jetbrains.com/help/idea/intention-actions.html#apply-intention-actions "intent actions") to refactor code Reference: [https://lightrun.com/best-practices/the-quick-and-easy-guide-to-reformatting-code-in-intellij/](https://lightrun.com/best-practices/the-quick-and-easy-guide-to-reformatting-code-in-intellij/ "best practises reformatting code in intellij")
+4. Using static code analysis tools like sonarqube to catch issues like deep nesting.
+5. Fluent APIs  
+   When using Java's fluent API to write a functional style of programming, the operator should be in the new line.  
+   **Correct**
+
+   {% highlight java  %}   
+   _.onException(IllegalArgumentException.class)_
+
+       _.handled(true)_
+
+       _.setHeader(Exchange.CONTENT_TYPE, constant("text/plain"))_
+
+       _.setBody().constant("Invalid request data");_
+
+   {% endhighlight %}
+
+   **Incorrect**  
+   {% highlight java  %}   
+   _.onException(IllegalArgumentException.class)._
+
+       _handled(true)._  
+
+       _setHeader(Exchange.CONTENT_TYPE, constant("text/plain"))._
+
+       _setBody().constant("Invalid request data");_
+
+   {% endhighlight %}
+6. Test names  
+   \- test should follow the BDD convention:
+
+   _givenX_whenY_thenZ_
+
+   \- the _given_ part is optional, but the other two are not
+
+   **- example**:
+
+   _whenSendingAPost_thenCorrectStatusCode_
+
+   \- also, the delimiter (underline) should only be used between these sections, and not anywhere else
+
+   \- **for example - this isn’t correct**:
+
+   _whenSomethingHappens_andSomethingElse_thenSuccessfull_
+7. **tests - structure**
+
+   \- always use **a new line before the _then_ section** of the test
+
+   \- for example (notice the new line):
+
+   {% highlight java  %} 
+
+   _public void whenSomething_thenSomethingElse {  
+    // some preparation code belonging to the when section_
+
+   _assert( ...)_
+
+   _}_
+
+   {% endhighlight %}
+8. **code - new lines**
+
+   \- here are a few suggestions of where to add (and not add new lines)
+
+   \- add a new line before the comment: _// getters and setters_
+
+   \- add a new line between the _given_, _when_ and _then_ sections of a test
+9. **code - breaking a new line into multiple lines**
+
+   \- **example 1 - incorrect**:  
+   {% highlight java  %} 
+
+   _public Object process(BeanContext context, Object object,_
+
+   _String name, Object value) {_
+
+   {% endhighlight  %} 
+
+   \- **example 1 - correct**:  
+   {% highlight java  %} 
+
+   _public Object process(_
+
+   _BeanContext context, Object object, String name, Object value) {_
+
+   {% endhighlight  %} 
+
+   \- **example 2 - incorrect**:  
+   {% highlight java  %} 
+
+   _@RequestMapping(_
+
+   _value = "/ex/foos", headers = { "key1=val1", "key2=val2" },_
+
+   _method = GET)_
+
+   {% endhighlight  %} 
+
+   \- **example 2 - correct**:  
+   {% highlight java  %} 
+
+   _@RequestMapping(_
+
+   _value = "/ex/foos",_
+
+   _headers = { "key1=val1", "key2=val2" },_
+
+   _method = GET_
+
+   _)_
+
+   {% endhighlight  %} 
+
+   \- **example 3 - incorrect**:  
+   {% highlight java  %} 
+
+   _public void givenDestWithNullReverseMappedToSourceAndLocalConfigForNoNull_
+
+   __whenFailsToMap_thenCorrect() {_
+
+   {% endhighlight  %} 
+
+   \- **example 3 - correct**: either put the entire method on a new line or rename it; definitely don’t break a method name in the middle
+
+   \- when breaking a line with an operator, put the operator on the new line
+
+   \- **example - correct**:  
+   {% highlight java  %} 
+
+   CompletableFuture<String> completableFuture   
+    = new CompletableFuture<>();
+
+   {% endhighlight  %} 
+
+   \- **incorrect**:
+
+   {% highlight java  %} 
+
+   CompletableFuture<String> completableFuture =
+
+   new CompletableFuture<>();
+
+   {% endhighlight  %} 
