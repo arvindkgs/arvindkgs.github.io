@@ -17,9 +17,9 @@ Code formatting is opinionated and individualistic. But looking at code for more
 1. Use fewer comments  
    Yes, that's right. While it sounds counter-intuitive, it looks to reduce the fatigue of the reader. The code should be self-explanatory. Example:
 
-   {% highlight java  %}  
-   public Booking createBooking(@RequestBody Booking booking, RestTemplate restTemplate) {
+   {% highlight java  %}
 
+       public Booking createBooking(@RequestBody Booking booking, RestTemplate restTemplate) {
        // In a "real" environment this would at the very least be a property/environment variable, but ideally something like Service Discovery like Eureka
        
        Restaurant restaurant = restTemplate.getForObject("http://localhost:8080/restaurants/" + booking.getRestaurantId(), Restaurant.class);
@@ -43,8 +43,9 @@ Code formatting is opinionated and individualistic. But looking at code for more
        // if we got this far, the booking is valid and we can save it
        
        return repository.save(booking);
+       }
 
-   }  
+     
    {% endhighlight %}
 
    This can be reduced to
