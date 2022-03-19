@@ -9,7 +9,7 @@ elements:
 last_modified_at: 2019-11-01T18:57:51.000+00:00
 categories: []
 title: Guidelines for structuring REST APIs
-
+comments: true
 ---
 Guidelines for structuring REST APIs
 
@@ -218,3 +218,25 @@ Advantages:
 Side-note: When you need to group your APIs under an umbrella (be it entity/functional unit/workflow etc) make sure your umbrella/parent grows at a slower rate than your inner children. This gives a better structuring and visibility as your application grows.
 
 Hopefully more to follow in this series on 'Designing REST APIs'.
+
+{% if page.comments %}
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+   
+    var disqus_config = function () {
+    this.page.url = 'https://www.arvindkgs.com/2020/01/29/guidelines-for-structuring-rest-apis.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '2020/01/29/guidelines-for-structuring-rest-apis'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://arvindkgs-com.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}
